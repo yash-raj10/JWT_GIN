@@ -17,7 +17,7 @@ func main() {
 	r.Use(gin.Logger())
 
 	routes.AuthRoutes(r)
-	routes.UserRouter(r)
+	routes.UserRoutes(r)
 
 	r.GET("/api-1", func(c *gin.Context) {
 		c.JSON(200, gin.H{"success": "access granted for api-1"})
